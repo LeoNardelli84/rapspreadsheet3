@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'bombing';
+    src: url('../assets/fonts/Bombing.ttf');
+}
+body{
+    background-color: black !important;
+}
+.container-fluid{
+    padding: 0 !important;
+}
+h1{
+    font-family: 'bombing';
+    font-size: 40px !important;
+    color: red !important;
+}
+h3{
+    color: bisque !important;
+}
+p{
+    color: bisque;
+}
+
+main{
+    height: 200vh;
+    padding: 15px;
+}
+
+.navbar{
+    background-color: black;
+    box-shadow: 0px 20px 15px black;
+}
+
+/*main - section - presentacion*/
+.presentacion{
+    margin-top: 50px;
+   }
+.img-presentacion{
+    background-image: url('../assets/img/fms-internacional-logo-publico.jpg');
+    width: 300;
+    height: 300px;
+    border-radius: 85% 15% 49% 51% / 52% 16% 84% 48%;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 10px 10px 15px 15px black, inset 10px 10px 15px 15px  black;
+    opacity: 50%;
+
+}
+.presentacion {
+    width: 100% !important;
+
+}
+
+.app{
+    background-image: url('../assets/img/img-app.png');
+    width: 100%;
+    height: 400px !important;
+}
+
+
+/**/

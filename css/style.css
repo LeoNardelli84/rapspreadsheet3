@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'bombing';
+    src: url('../assets/fonts/Bombing.ttf');
+}
+@font-face {
+    font-family: 'rockybily';
+    src: url('../assets/fonts/Rockybilly.ttf');
+}
+@font-face {
+    font-family: 'darkness';
+    src: url(../assets/fonts/Darkness\ of\ the\ night.ttf);
+}
+body{
+    background-color: black !important;
+}
+.container-fluid{
+    padding: 0 !important;
+}
+h1{
+    font-family: 'bombing';
+    font-size: 40px !important;
+    color: red !important;
+}
+h3{
+    color: bisque !important;
+    font-family: 'rockybily';
+}
+
+p{
+    color: bisque;
+    font-family: 'darkness';
+    font-style: italic;
+}
+
+main{
+    
+    padding: 15px;
+}
+
+.navbar{
+    background-color: black;
+    box-shadow: 0px 20px 15px black;
+}
+
+/*main - section - presentacion*/
+.presentacion{
+    margin-top: 50px;
+   }
+.img-presentacion{
+    background-image: url('../assets/img/logo_2023.png');
+    width: 300;
+    height: 300px;
+    border-radius: 85% 15% 49% 51% / 52% 16% 84% 48%;
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 10px 10px 15px 25px black, inset 10px 10px 15px 15px  black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    animation-duration: 2s;
+}
+
+.presentacion {
+    width: 100% !important;
+    animation-duration: 1.8s;
+}
+
+.app{
+    padding-top: 30px;
+    margin-top: 50px;
+    background-image: url('../assets/img/img-app.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    animation-duration: 3s;
+}
+
+.app p{
+    width: 50%;
+    
+}
+
+/*main section formato-fms*/
+.formato-fms{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.formato-fms h2{
+    color: bisque;
+    font-family: 'bombing';
+    font-size: 60px !important;
+}
+.formato-fms .formato{
+    height: 50px;
+    width: 50vw;
+    background-color: bisque;
+    border-radius: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.donaciones{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.donaciones img{
+    width: 80%;
+}
+/*Footer*/
+.redes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.redes img{
+    width: 60px;
+    margin-bottom: 20px;
+}
