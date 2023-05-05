@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'bombing';
+    src: url('../../../../assets/fonts/Bombing.ttf');
+}
+@font-face {
+    font-family: 'rockybily';
+    src: url('../../../../assets/fonts/Rockybilly.ttf');
+}
+@font-face {
+    font-family: 'darkness';
+    src: url(../../../../assets/fonts/Darkness\ of\ the\ night.ttf);
+}
+
+/*body*/
+body{
+    background-color: black !important;
+}
+h1{
+    font-family: 'bombing';
+    font-size: 40px !important;
+    color: red !important;
+}
+.vs{
+    font-family: 'darkness';
+    
+    
+    
+}
+#p1, #p2{
+    font-family: 'darkness';
+}
+#p1{
+    color: red;
+}
+#p2{
+    color: blue;
+}
+
+p, label{
+    color: bisque;
+    font-family: 'darkness';
+    font-style: italic;
+}
+
+.container-fluid{
+    height: 200vh;
+}
+.navbar{
+    background-color: black;
+    box-shadow: 1px 3px 23px 26px rgba(0,0,0,1);
+    display: flex;
+}
+
+.players{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+/*Menu*/
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+a{
+    color: gray;
+    margin-top: 25px;
+    width: 300px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'bombing'!important;
+    font-size: 30px !important;
+
+}
+
+
+/*Footer*/
+footer{
+    animation-duration: 1s;
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.redes img{
+    width: 60px;
+    margin-bottom: 20px;
+}

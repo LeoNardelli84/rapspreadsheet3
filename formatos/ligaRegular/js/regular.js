@@ -29,7 +29,9 @@ $(function(){
         console.log("ahora")
         localStorage.setItem("p1", p1);
         localStorage.setItem("p2", p2);
-        $(location).attr('href', './formatos/ligaRegular/pages/menu.html');
+        
+
+        $(location).attr('href', './pages/menu.html');
            
       }
       

@@ -33,6 +33,9 @@ p, label{
 #subTitulo{
     height: 30px;
 }
+.input{
+    animation-duration: 1.5s;
+}
 .form-group{
     margin-bottom: 30px;
     display: flex;
@@ -40,6 +43,7 @@ p, label{
     align-items: center;
     flex-direction: column;
 }
+
 .form-group input{
     max-width: 80vw;
 }
@@ -56,6 +60,9 @@ p, label{
 }
 
 /*Footer*/
+footer{
+    animation-duration: 1s;
+}
 .redes{
     display: flex;
     align-items: center;
