@@ -1,6 +1,7 @@
 //https://mpago.la/1g2F5th link de donaciones mercadopago
 //https://www.youtube.com/watch?v=OrMpKvcLPw8 conectar github con cpanel repo publico
 //https://9elements.github.io/fancy-border-radius/#52.85.16.51--. div deformados
+localStorage.clear();
 
 //------------
 function obtenerFecha(){
@@ -34,7 +35,14 @@ function obtenerFecha(){
       }).then((result) => {
         if (result.isConfirmed) {
           
-          $(location).attr('href', './pages/regular.html')
+          switch (formato) {
+            case 'Liga regular':
+              $(location).attr('href', '../formatos/ligaRegular/regular.html')    
+              break;
+          
+            
+          }
+          
         }
       })
 

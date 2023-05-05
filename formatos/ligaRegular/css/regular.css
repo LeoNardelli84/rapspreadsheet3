@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'bombing';
+    src: url('../../../assets/fonts/Bombing.ttf');
+}
+@font-face {
+    font-family: 'rockybily';
+    src: url('../../../assets/fonts/Rockybilly.ttf');
+}
+@font-face {
+    font-family: 'darkness';
+    src: url(../../../assets/fonts/Darkness\ of\ the\ night.ttf);
+}
+
+/*body*/
+body{
+    background-color: black !important;
+}
+h1{
+    font-family: 'bombing';
+    font-size: 40px !important;
+    color: red !important;
+}
+p, label{
+    color: bisque;
+    font-family: 'darkness';
+    font-style: italic;
+}
+#subTitulo{
+    height: 30px;
+}
+.form-group{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-group input{
+    max-width: 80vw;
+}
+#btn-comenzar {
+    background-color: bisque;
+    border-radius: 40px;
+    font-family: 'bombing';
+    margin-top: 350px;
+    font-size: 40px;
+    color: black;
+    width: 150px;
+    height: 50px;
+    padding: 0px !important;
+}
+
+/*Footer*/
+.redes{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.redes img{
+    width: 60px;
+    margin-bottom: 20px;
+}
