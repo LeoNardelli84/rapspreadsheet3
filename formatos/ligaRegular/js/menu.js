@@ -8,70 +8,72 @@ $(function(){
 
     //btn incremental verde o gris
     if(localStorage.getItem('im_totalIm1') ===null){
-        $(".incremental>a").css('background', 'grey')
+      
+        $(".incremental>a").css('background-color', 'rgba(145, 145, 145, 0.51)')//gris
     } else{
-        $(".incremental>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
-        $(".incremental>a").css('color', 'black')
+        $(".incremental>a").css('background-color', "rgba(17, 213, 78, 0.39)")//verde
+        $(".incremental>a").css('box-shadow', '0px 0px 15px green')
         terminados += 1;
     }
     //btn random verde o gris
     if(localStorage.getItem('rm_totalRm1') ===null){
-        $(".incremental>a").css('background', 'grey')
+        $(".random>a").css('background', 'grey')
     } else{
-        $(".incremental>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
-        $(".incremental>a").css('color', 'black')
+        $(".random>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
+        $(".ramdom>a").css('color', 'black')
         terminados += 1;
     }
     //btn libre verde o gris
     if(localStorage.getItem('li_totalLi1') ===null){
-        $(".incremental>a").css('background', 'grey')
+        $(".libres>a").css('background', 'grey')
     } else{
-        $(".incremental>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
-        $(".incremental>a").css('color', 'black')
+        $(".libres>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
+        $(".libres>a").css('color', 'black')
         terminados += 1;
     }
     //btn deluxe verde o gris
     if(localStorage.getItem('de_totalDe1') ===null){
-        $(".incremental>a").css('background', 'grey')
+        $(".deluxe>a").css('background', 'grey')
     } else{
-        $(".incremental>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
-        $(".incremental>a").css('color', 'black')
+        $(".deluxe>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
+        $(".deluxe>a").css('color', 'black')
         terminados += 1;
     }
 
     switch (terminados) {
         case 0:      //ARRANCA EL MENU
           var options = {
-            strings: ["Bienvenido a RAP Spreadsheet", "Formato FMS","Versión Alpha","Nuevo formato FMS 2020", "3...2...1... TIEMPO!!", "" ],
+            strings: ["Bienvenido a rapspreadsheet", "FMS-Regenesis","","Nuevo formato FMS 2023", "3...2...1... TIEMPO!!", "" ],
             typeSpeed: 100,
             showCursor: false,
             smartBackspace: true
           }
-          var typed = new Typed("#typed", options);
+          var typed = new Typed("#subs", options);
     
-          $("#easyMode").removeClass("disabled");
+          $(".incremental>a").removeClass("disabled");
+          $(".incremental>a").css('background-color', 'white')
     
           break;
     
           case 1:  // EASY MODE TERMINADO
     
           var options = {
-            strings: ["Easy Mode Terminado", "" + localStorage.getItem('em_totalEasyMode1') + " Pts Para " + player1 +"","" + localStorage.getItem('em_totalEasyMode2') + " Pts Para " + player2 +"", "Prepárate para el Hard Mode", "" ],
+            strings: ["Incremental Mode Terminado", "" + localStorage.getItem('im_totalIm1') + " Pts Para " + p1 +"","" + localStorage.getItem('im_totalIm2') + " Pts Para " + p2 +"", "Prepárate para el Random Mode", "" ],
             typeSpeed: 100,
             showCursor: false,
             smartBackspace: true
           };
     
-          var typed = new Typed("#typed", options);
+          var typed = new Typed("#subs", options);
     
     
-          $("#hardMode").removeClass("disabled");
+          $(".random>a").removeClass("disabled");
     
           break;
     
           case 2:  // HARD MODE TERMINADO
           var options = {
-            strings: ["<h4>Hard Mode Terminado</h4>", "<h4>" + localStorage.getItem('hm_totalHardMode1') + " Pts Para " + player1 +"</h4>","<h4>" + localStorage.getItem('hm_totalHardMode2') + " Pts Para " + player2 +"</h4>", "<h4>Prepárate para Temáticas</h4>", "<h4></h4>" ],
+            strings: ["<h4>Random Mode Terminado</h4>", "<h4>" + localStorage.getItem('rm_totalRm1') + " Pts Para " + p1 +"</h4>","<h4>" + localStorage.getItem('rm_totalRm2') + " Pts Para " + p2 +"</h4>", "<h4>Prepárate para Temáticas</h4>", "<h4></h4>" ],
             typeSpeed: 100,
             showCursor: false,
             smartBackspace: true

@@ -25,8 +25,7 @@ $(function(){
         Swal.fire('Necesitamos el nombre del 2do Mc')
   
       } else{
-        alert("ahora")
-        console.log("ahora")
+        
         localStorage.setItem("p1", p1);
         localStorage.setItem("p2", p2);
         
