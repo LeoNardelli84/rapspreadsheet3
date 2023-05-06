@@ -38,7 +38,7 @@ function obtenerFecha(){
           
           switch (formato) {
             case 'Liga regular':
-              $(location).attr('href', '../formatos/ligaRegular/regular.html')    
+              $(location).attr('href', 'formatos/ligaRegular/regular.html')    
               break;
           
             

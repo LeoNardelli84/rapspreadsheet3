@@ -38,6 +38,7 @@ $(function(){
         $(".deluxe>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
         $(".deluxe>a").css('color', 'black')
         terminados += 1;
+        
     }
 
     switch (terminados) {
