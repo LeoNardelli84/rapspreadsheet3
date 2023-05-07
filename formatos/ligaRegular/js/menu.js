@@ -116,16 +116,19 @@ $(function(){
           var typed = new Typed("#subs", options);
           $("#btn-terminarBatalla").removeClass("invisible") 
           $("#btn-terminarBatalla").removeClass("disabled");
-          //$("#btn-terminarBatalla").addClass("animate__slideInRight")
+          $("#btn-terminarBatalla").addClass("animate__heartBeat")
           $("#btn-terminarBatalla").addClass("animate__pulse");
           $("#btn-terminarBatalla").css('background-color', 'bisque')
           $("#btn-terminarBatalla").css('box-shadow', '0px 0px 15px bisque')
           $("#btn-terminarBatalla").focus();
           $(".incremental>a").addClass("animate__pulse");
+          $(".incremental>a").addClass("animate__heartBeat");
           $(".random>a").addClass("animate__pulse");
+          $(".random>a").addClass("animate__heartBeat");
           $(".libres>a").addClass("animate__pulse");
+          $(".libres>a").addClass("animate__heartBeat");
           $(".deluxe>a").addClass("animate__pulse");
-    
+          $(".deluxe>a").addClass("animate__heartBeat");
           break;
     
       }//fin switch
