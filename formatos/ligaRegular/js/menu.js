@@ -20,22 +20,25 @@ $(function(){
         $(".random>a").css('background', 'grey')
     } else{
         $(".random>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
+        $(".random>a").css('box-shadow', '0px 0px 15px green')
         $(".random>a").css('color', 'black')
         terminados += 1;
     }
     //btn libre verde o gris
-    if(localStorage.getItem('li_totalLi1') ===null){
+    if(localStorage.getItem('ml_totalp1') ===null){
         $(".libres>a").css('background', 'grey')
     } else{
         $(".libres>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
+        $(".libres>a").css('box-shadow', '0px 0px 15px green')
         $(".libres>a").css('color', 'black')
         terminados += 1;
     }
     //btn deluxe verde o gris
-    if(localStorage.getItem('de_totalDe1') ===null){
+    if(localStorage.getItem('de_totalp1') ===null){
         $(".deluxe>a").css('background', 'grey')
     } else{
         $(".deluxe>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
+        $(".deluxe>a").css('box-shadow', '0px 0px 15px green')
         $(".deluxe>a").css('color', 'black')
         terminados += 1;
         
@@ -53,6 +56,7 @@ $(function(){
     
           $(".incremental>a").removeClass("disabled");
           $(".incremental>a").css('background-color', 'white')
+          $(".incremental>a").focus();
     
           break;
     
@@ -70,6 +74,8 @@ $(function(){
       
             $(".random>a").removeClass("disabled");
             $(".random>a").css('background-color', 'white')
+            $(".random>a").focus();
+
       
             break;
     
@@ -83,56 +89,44 @@ $(function(){
           var typed = new Typed("#subs", options);
           $(".libres>a").removeClass("disabled");
           $(".libres>a").css('background-color', 'white')
+          $(".libres>a").focus();
           break;
     
-          case 3: //Tematicas terminado
+          case 3: //Minutos libres terminados
             var options = {
-              strings: ["<h4>Temáticas Terminado</h4>", "<h4>" + localStorage.getItem('te_totalTematicas1') + " Pts Para " + player1 +"</h4>","<h4>" + localStorage.getItem('te_totalTematicas2') + " Pts Para " + player2 +"</h4>", "<h4>Prepárate para Random mode</h4>"],
+              strings: ["<h4>Minutos libres terminados", "<h4>" + localStorage.getItem('ml_totalp1') + " Pts Para " + p1 +"</h4>","<h4>" + localStorage.getItem('ml_totalp2') + " Pts Para " + p2 +"</h4>", "<h4>Preparate para el Deluxe</h4>"],
               typeSpeed: 100,
               showCursor: false,
               smartBackspace: true
             }
-            var typed = new Typed("#typed", options);
-            $("#randomMode").removeClass("disabled");
+            var typed = new Typed("#subs", options);
+            $(".deluxe>a").removeClass("disabled");
+            $(".deluxe>a").css('background-color', 'white')
+            $(".deluxe>a").focus();
     
             break;
     
-          case 4: // personajes terminado
+          case 4: // deluxe terminado
           var options = {
-            strings: ["<h4>Random Mode Terminado</h4>", "<h4>" + localStorage.getItem('rm_totalRandom1') + " Pts Para " + player1 +"</h4>","<h4>" + localStorage.getItem('rm_totalRandom2') + " Pts Para " + player2 +"</h4>", "<h4>Se viene el minuto libre...</h4>"],
+            strings: ["<h4>Deluxe Terminado</h4>", "<h4>" + localStorage.getItem('de_totalp1') + " Pts Para " + p1 +"</h4>","<h4>" + localStorage.getItem('de_totalp2') + " Pts Para " + p2 +"</h4>", "<h4>Analizando datos...</h4>"],
             typeSpeed: 70,
             showCursor: false,
             smartBackspace: true
           }
-          var typed = new Typed("#typed", options);
-          $("#libre").removeClass("disabled");
-    
-          break;
-    
-          case 5:
-          var options = {
-            strings: ["<h4>Libre Terminado</h4>", "<h4>" + localStorage.getItem('li_totalLibre1') + " Pts Para " + player1 +"</h4>","<h4>" + localStorage.getItem('li_totalLibre2') + " Pts Para " + player2 +"</h4>", "<h4>Prepárate para Deluxe</h4>", "<h4></h4>" ],
-            typeSpeed: 70,
-            showCursor: false,
-            smartBackspace: true
-          }
-          var typed = new Typed("#typed", options);
-          $("#deluxe").removeClass("disabled");
-    
-          break;
-    
-          case 6:
-          var options = {
-            strings: ["<h4>Deluxe Terminado</h4>", "<h4>" + localStorage.getItem('de_totalDeluxe1') + " Pts Para " + player1 +"</h4>","<h4>" + localStorage.getItem('de_totalDeluxe2') + " Pts Para " + player2 +"</h4>", "<h4>Finaliza para ver los resultados</h4>", "<h4></h4>" ],
-            typeSpeed: 70,
-            showCursor: false,
-            smartBackspace: true
-          }
-          var typed = new Typed("#typed", options);
-    
-          //activar termianr batalla
+          var typed = new Typed("#subs", options);
+          $("#btn-terminarBatalla").removeClass("invisible") 
           $("#btn-terminarBatalla").removeClass("disabled");
+          //$("#btn-terminarBatalla").addClass("animate__slideInRight")
+          $("#btn-terminarBatalla").addClass("animate__pulse");
+          $("#btn-terminarBatalla").css('background-color', 'bisque')
+          $("#btn-terminarBatalla").css('box-shadow', '0px 0px 15px bisque')
+          $("#btn-terminarBatalla").focus();
+          $(".incremental>a").addClass("animate__pulse");
+          $(".random>a").addClass("animate__pulse");
+          $(".libres>a").addClass("animate__pulse");
+          $(".deluxe>a").addClass("animate__pulse");
     
+          break;
     
       }//fin switch
     

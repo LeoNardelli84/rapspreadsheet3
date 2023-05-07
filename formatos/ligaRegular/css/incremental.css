@@ -29,8 +29,16 @@ h1{
     font-size: 40px !important;
     color: red !important;
 }
+
+p{
+    margin-bottom: 2px !important;
+    margin-top: 10px !important;
+}
 #p1, #p2, .vs{
     font-family: 'darkness';
+    margin-bottom: 0px !important;
+    display: flex;
+    align-items: center;
 }
 #p1{
     color: red;
@@ -41,7 +49,9 @@ h1{
 .players{
     display: flex;
     justify-content: space-between;
-    width: 100%;   
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;    
 }
 
 .patrones{
@@ -67,6 +77,10 @@ input{
 .skills{
     margin-top: 30px !important;
 }
+
+#btn-continuar{
+
+}
 /*Footer*/
 footer{
     animation-duration: 1s;
@@ -80,4 +94,14 @@ footer{
 .redes img{
     width: 60px;
     margin-bottom: 20px;
+}
+
+
+/*CSS libre.html*/
+.vuelta{
+    margin-top: 100px !important;
+}
+/*CSS deluxe.html*/
+.acapela{
+    margin-bottom: 30px;
 }
