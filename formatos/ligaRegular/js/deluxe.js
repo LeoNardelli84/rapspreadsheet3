@@ -87,7 +87,7 @@ $(function(){
     //btn-continuar
     $("#btn-continuar").click(function(){
         Swal.fire({
-            title: 'Terminar Incremental?',
+            title: 'Terminar Deluxe?',
             text: "No podras realizar cambios",
             showCancelButton: true,
             confirmButtonColor: 'black',
