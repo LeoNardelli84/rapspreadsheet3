@@ -5,15 +5,15 @@
 }
 @font-face {
     font-family: 'bombing';
-    src: url('../../../../assets/fonts/Bombing.ttf');
+    src: url('../../../assets/fonts/Bombing.ttf');
 }
 @font-face {
     font-family: 'rockybily';
-    src: url('../../../../assets/fonts/Rockybilly.ttf');
+    src: url('../../../assets/fonts/Rockybilly.ttf');
 }
 @font-face {
     font-family: 'darkness';
-    src: url(../../../../assets/fonts/Darkness\ of\ the\ night.ttf);
+    src: url(../../../assets/fonts/Darkness\ of\ the\ night.ttf);
 }
 
 /*body*/

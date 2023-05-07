@@ -56,7 +56,8 @@ $(window).scroll(function (event) {
   console.log(scroll);
 
   $(".presentacion").removeClass("invisible");
-  
+  $(".mano").addClass("animate__backOutDown");
+  $(".mano").addClass("invisible")
   $(".presentacion").addClass("animate__zoomIn");
   $(".app").removeClass("invisible");
   $(".app").addClass("animate__fadeInLeftBig");

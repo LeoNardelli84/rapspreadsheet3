@@ -43,6 +43,27 @@ p{
     font-style: italic;
 }
 
+.mano{
+    z-index: 100;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 70%;
+    animation: manito 3s infinite;
+    width: 60px;
+
+}
+
+@keyframes manito {
+    0% {top: 70%;}
+    50% {top: 50%;}
+    51% {top: 50%; width: 90px;}
+    100%{top:70%; width: 90px;}
+
+}
+.mano img{
+    width: 100%;
+}
 main{
     
     padding: 15px;
