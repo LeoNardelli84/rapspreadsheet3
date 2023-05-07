@@ -7,20 +7,20 @@ $(function(){
     $("#p2").html(p2)
 
     //btn incremental verde o gris
-    if(localStorage.getItem('im_totalIm1') ===null){
+    if(localStorage.getItem('im_totalp1') ===null){
       
         $(".incremental>a").css('background-color', 'rgba(145, 145, 145, 0.51)')//gris
     } else{
-        $(".incremental>a").css('background-color', "rgba(17, 213, 78, 0.39)")//verde
+        $(".incremental>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')//verde
         $(".incremental>a").css('box-shadow', '0px 0px 15px green')
         terminados += 1;
     }
     //btn random verde o gris
-    if(localStorage.getItem('rm_totalRm1') ===null){
+    if(localStorage.getItem('rm_totalp1') ===null){
         $(".random>a").css('background', 'grey')
     } else{
         $(".random>a").css('background','linear-gradient(112deg, rgba(23,148,4,1) 0%, rgba(101,253,45,1) 40%)')
-        $(".ramdom>a").css('color', 'black')
+        $(".random>a").css('color', 'black')
         terminados += 1;
     }
     //btn libre verde o gris
@@ -56,32 +56,33 @@ $(function(){
     
           break;
     
-          case 1:  // EASY MODE TERMINADO
+          case 1:  // INCREMENTAL MODE TERMINADO
     
+            var options = {
+              strings: ["Incremental Mode Terminado", "" + localStorage.getItem('im_totalp1') + " Pts Para " + p1 +"","" + localStorage.getItem('im_totalp2') + " Pts Para " + p2 +"", "Preparate para el Random Mode", "" ],
+              typeSpeed: 100,
+              showCursor: false,
+              smartBackspace: true
+            };
+      
+            var typed = new Typed("#subs", options);
+      
+      
+            $(".random>a").removeClass("disabled");
+            $(".random>a").css('background-color', 'white')
+      
+            break;
+    
+          case 2:  // RANDOM MODE TERMINADO
           var options = {
-            strings: ["Incremental Mode Terminado", "" + localStorage.getItem('im_totalIm1') + " Pts Para " + p1 +"","" + localStorage.getItem('im_totalIm2') + " Pts Para " + p2 +"", "Prepárate para el Random Mode", "" ],
-            typeSpeed: 100,
-            showCursor: false,
-            smartBackspace: true
-          };
-    
-          var typed = new Typed("#subs", options);
-    
-    
-          $(".random>a").removeClass("disabled");
-    
-          break;
-    
-          case 2:  // HARD MODE TERMINADO
-          var options = {
-            strings: ["<h4>Random Mode Terminado</h4>", "<h4>" + localStorage.getItem('rm_totalRm1') + " Pts Para " + p1 +"</h4>","<h4>" + localStorage.getItem('rm_totalRm2') + " Pts Para " + p2 +"</h4>", "<h4>Prepárate para Temáticas</h4>", "<h4></h4>" ],
+            strings: ["<h4>Random Mode Terminado</h4>", "<h4>" + localStorage.getItem('rm_totalp1') + " Pts Para " + p1 +"</h4>","<h4>" + localStorage.getItem('rm_totalp2') + " Pts Para " + p2 +"</h4>", "<h4>Sigue con el minuto a sangre...</h4>", "<h4></h4>" ],
             typeSpeed: 100,
             showCursor: false,
             smartBackspace: true
           }
-          var typed = new Typed("#typed", options);
-          $("#tematicas").removeClass("disabled");
-    
+          var typed = new Typed("#subs", options);
+          $(".libres>a").removeClass("disabled");
+          $(".libres>a").css('background-color', 'white')
           break;
     
           case 3: //Tematicas terminado

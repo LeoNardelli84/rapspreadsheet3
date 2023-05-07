@@ -28,12 +28,13 @@ function tomarDatos(){
     p1_totalPatrones = p1_patron1 + p1_patron2 + p1_patron3 + p1_patron4 + p1_patron5 + p1_patron6;
     p2_totalPatrones = p2_patron1 + p2_patron2 + p2_patron3 + p2_patron4 + p2_patron5 + p2_patron6; 
     
-    p1_totalIm = p1_totalPatrones + p1_tecnica + p1_flow + p1_escena;
-    p2_totalIm = p2_totalPatrones + p2_tecnica + p2_flow + p2_escena;
+    p1_totalRm = p1_totalPatrones + p1_tecnica + p1_flow + p1_escena;
     
+    p2_totalRm = p2_totalPatrones + p2_tecnica + p2_flow + p2_escena;
     
-    
-    if (isNaN(p1_totalIm)) {
+
+    if (isNaN(p1_totalRm)) {
+        
         Swal.fire({
             title: 'Te falto votar algo de ' + localStorage.getItem('p1') ,
             showClass: {
@@ -43,7 +44,7 @@ function tomarDatos(){
               popup: 'animate__animated animate__fadeOutUp'
             }
           })
-    } else if (isNaN(p2_totalIm)){
+    } else if (isNaN(p2_totalRm)){
         Swal.fire({
             title: 'Te falto votar algo de ' + localStorage.getItem('p2') ,
             showClass: {
@@ -55,22 +56,20 @@ function tomarDatos(){
           })
     } else{
             //seteo en localStorage
-            //player 1
-            localStorage.setItem('im_totalPatronesp1', p1_totalPatrones)
-            localStorage.setItem('im_tecnicasp1', p1_tecnica)
-            localStorage.setItem('im_flowp1', p1_flow)
-            localStorage.setItem('im_escenap1', p1_escena)
-            localStorage.setItem('im_totalp1', p1_totalIm)
+             //player 1
+             localStorage.setItem('rm_totalPatronesp1', p1_totalPatrones)
+             localStorage.setItem('rm_tecnicasp1', p1_tecnica)
+             localStorage.setItem('rm_flowp1', p1_flow)
+             localStorage.setItem('rm_escenap1', p1_escena)
+             localStorage.setItem('rm_totalp1', p1_totalRm)
             //player 2
-            localStorage.setItem('im_totalPatronesp2',p2_totalPatrones)
-            localStorage.setItem('im_tecnicasp2', p2_tecnica)
-            localStorage.setItem('im_flowp2', p2_flow)
-            localStorage.setItem('im_escenap2', p2_escena)
-            localStorage.setItem('im_totalp2', p2_totalIm)
+            localStorage.setItem('rm_totalPatronesp2',p2_totalPatrones)
+            localStorage.setItem('rm_tecnicasp2', p2_tecnica)
+            localStorage.setItem('rm_flowp2', p2_flow)
+            localStorage.setItem('rm_escenap2', p2_escena)
+            localStorage.setItem('rm_totalp2', p2_totalRm)
     }
- 
-
-    
+   
 } //fin funcion tomarDatos()
 
 $(function(){
@@ -78,12 +77,10 @@ $(function(){
     $("#p2").html(localStorage.getItem("p2"))
 
     //btn-continuar
-    $("#btn-continuar").click(function(e){
-        e.preventDefault()
+    $("#btn-continuar").click(function(){
         Swal.fire({
             title: 'Terminar Incremental?',
             text: "No podras realizar cambios",
-            icon: 'question',
             showCancelButton: true,
             confirmButtonColor: 'black',
             cancelButtonColor: '#d33',
@@ -92,11 +89,9 @@ $(function(){
           }).then((result) => {
             if (result.isConfirmed) {
               tomarDatos();
-              $(location).attr('href', 'menu.html');  
+              $(location).attr('href', 'menu.html')
             }
-            
           })
-
     });
 
 });

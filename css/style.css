@@ -27,6 +27,11 @@ h1{
     font-size: 40px !important;
     color: red !important;
 }
+.presentacion h2{
+    font-family: 'bombing';
+    font-size: 40px !important;
+    color: bisque !important;
+}
 h3{
     color: bisque !important;
     font-family: 'rockybily';
