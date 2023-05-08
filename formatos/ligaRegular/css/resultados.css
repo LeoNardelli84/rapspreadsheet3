@@ -39,6 +39,7 @@ p{
     margin-bottom: 2px !important;
     margin-top: 10px !important;
 }
+
 #p1, #p2, .vs{
     font-family: 'darkness';
     margin-bottom: 0px !important;
@@ -65,8 +66,7 @@ p{
 
 .graficos-final{
     height: 120vh;
-    
-    padding-top: 60px;
+    padding-top: 100px;
 }
 /*Footer*/
 footer{
@@ -77,6 +77,8 @@ footer{
     display: flex;
     align-items: center;
     flex-direction: column;
+    
+
 }
 .redes img{
     width: 60px;

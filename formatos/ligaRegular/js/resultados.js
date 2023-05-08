@@ -132,12 +132,15 @@ $(function(){
     var difTotales = difTotales(resFinalp1, resFinalp2)
     if( difTotales <= 1.5){
         $("#resultado").html("replica")
+        $(".redes").css('background-color', 'rgb(57, 57, 57)')
         $(".graficos-final").css('background-color', 'rgb(57, 57, 57)')
     } else if (resFinalp1 > resFinalp2) {
         $("#resultado").html("gano " + p1);
+        $(".redes").css('background-color', 'red')
         $(".graficos-final").css('background-color', 'red')
     } else{
         $("#resultado").html("gano " + p2)
+        $(".redes").css('background-color', 'blue')
         $(".graficos-final").css('background-color', 'blue')
     }
 });
