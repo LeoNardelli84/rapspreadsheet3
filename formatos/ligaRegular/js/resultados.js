@@ -118,4 +118,26 @@ $(function(){
     $("#de_flowp2").html(de_flowp2)
     $("#de_escenap2").html(de_escenap2)
     $("#de_totalp2").html(de_totalp2)
+
+    $("#resFinalp1").html(resFinalp1)
+    $("#resFinalp2").html(resFinalp2)
+
+    function difTotales(num1, num2){
+        if (num1 > num2) {
+          return num1 - num2;
+        }else{
+          return num2 - num1;
+        }
+      }
+    var difTotales = difTotales(resFinalp1, resFinalp2)
+    if( difTotales <= 1.5){
+        $("#resultado").html("replica")
+        $(".graficos-final").css('background-color', 'rgb(57, 57, 57)')
+    } else if (resFinalp1 > resFinalp2) {
+        $("#resultado").html("gano " + p1);
+        $(".graficos-final").css('background-color', 'red')
+    } else{
+        $("#resultado").html("gano " + p2)
+        $(".graficos-final").css('background-color', 'blue')
+    }
 });

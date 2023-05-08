@@ -30,7 +30,7 @@ function tomarDatos(){
     
     p1_totalIm = p1_totalPatrones + p1_tecnica + p1_flow + p1_escena;
     p2_totalIm = p2_totalPatrones + p2_tecnica + p2_flow + p2_escena;
-    console.log(p1_totalIm);
+    
     
     
     if (isNaN(p1_totalIm)) {
@@ -74,9 +74,14 @@ function tomarDatos(){
     
 } //fin funcion tomarDatos()
 
+
 $(function(){
     $("#p1").html(localStorage.getItem("p1"))
     $("#p2").html(localStorage.getItem("p2"))
+
+    $("input").focus(function(){
+      $(this).select()
+    });
 
     //btn-continuar
     $("#btn-continuar").click(function(e){

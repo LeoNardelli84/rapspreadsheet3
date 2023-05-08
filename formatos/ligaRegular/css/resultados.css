@@ -16,14 +16,19 @@
     src: url(../../../../assets/fonts/Darkness\ of\ the\ night.ttf);
 }
 
+.container-fluid{
+    padding: 0px !important;
+    box-sizing: border-box;
+}
+
+.row{
+    width: 100% !important;
+}
 
 body{
     background-color: white !important;
 }
-.navbar{
-    background-color:white;
-    box-shadow: 1px 16px 23px 17pxwhite;
-}
+
 h1{
     font-family: 'bombing';
     font-size: 40px !important;
@@ -56,6 +61,13 @@ p{
     padding-right: 20px;    
 }
 
+/*section graficos finales*/
+
+.graficos-final{
+    height: 120vh;
+    
+    padding-top: 60px;
+}
 /*Footer*/
 footer{
     animation-duration: 1s;

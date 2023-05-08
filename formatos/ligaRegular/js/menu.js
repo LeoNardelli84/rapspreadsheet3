@@ -117,7 +117,7 @@ $(function(){
           $("#btn-terminarBatalla").removeClass("invisible") 
           $("#btn-terminarBatalla").removeClass("disabled");
           $("#btn-terminarBatalla").addClass("animate__heartBeat")
-          $("#btn-terminarBatalla").addClass("animate__pulse");
+          $("#btn-terminarBatalla").addClass("animate__backInDown");
           $("#btn-terminarBatalla").css('background-color', 'bisque')
           $("#btn-terminarBatalla").css('box-shadow', '0px 0px 15px bisque')
           $("#btn-terminarBatalla").focus();

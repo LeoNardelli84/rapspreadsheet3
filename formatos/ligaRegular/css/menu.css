@@ -84,12 +84,13 @@ a{
 
 
 #btn-terminarBatalla{
-    animation-duration: 1.3s;
+    animation-duration: 1s;
 }
 .terminar-batalla{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 /*efecto sacudir cuando termnina*/
 .incremental a{
