@@ -30,12 +30,18 @@ p, label{
     font-family: 'darkness';
     font-style: italic;
 }
+.navbar{
+    background-color: black;
+    box-shadow: 1px 3px 23px 26px rgba(0,0,0,1);
+    display: flex;
+}
 #subTitulo{
     height: 30px;
 }
 .input{
     animation-duration: 1.5s;
 }
+
 .form-group{
     margin-bottom: 30px;
     display: flex;

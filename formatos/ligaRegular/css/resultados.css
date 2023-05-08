@@ -62,12 +62,34 @@ p{
     padding-right: 20px;    
 }
 
-/*section graficos finales*/
 
-.graficos-final{
-    height: 120vh;
-    padding-top: 100px;
+/*section graficos finales*/
+.nombres_final{
+    height: 40px;
 }
+.nombre_finalp1,
+.nombre_finalp2,
+.vs_final {
+    font-family: 'darkness';
+    margin-bottom: 0px !important;
+}
+#nombre_finalp1{
+    color: red;
+    text-shadow: 0px 0px 4px black;
+}
+#nombre_finalp2{
+    color: blue;
+    text-shadow: 0px 0px 4px black;
+}
+.graficos-final{
+    height: 100vh;
+    padding-top: 30px;
+}
+.resultados{
+    display: flex;
+    justify-content: space-between;
+}
+
 /*Footer*/
 footer{
     animation-duration: 1s;
@@ -81,6 +103,6 @@ footer{
 
 }
 .redes img{
-    width: 60px;
-    margin-bottom: 20px;
+    width: 50px;
+    
 }

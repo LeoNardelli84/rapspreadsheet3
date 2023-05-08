@@ -119,6 +119,8 @@ $(function(){
     $("#de_escenap2").html(de_escenap2)
     $("#de_totalp2").html(de_totalp2)
 
+    $("#nombre_finalp1").html(p1);
+    $("#nombre_finalp2").html(p2);
     $("#resFinalp1").html(resFinalp1)
     $("#resFinalp2").html(resFinalp2)
 
