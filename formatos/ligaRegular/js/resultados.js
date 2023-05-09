@@ -131,6 +131,7 @@ $(function(){
           return num2 - num1;
         }
       }
+
     var difTotales = difTotales(resFinalp1, resFinalp2)
     if( difTotales <= 1.5){
         $("#resultado").html("replica")
@@ -145,4 +146,139 @@ $(function(){
         $(".redes").css('background-color', 'blue')
         $(".graficos-final").css('background-color', 'blue')
     }
-});
+
+    //Chart.js
+    //crear los % del player 1
+    var totalPatronesp1 = (parseFloat(im_totalPatronesp1) + parseFloat(rm_totalPatronesp1) + parseFloat(ml_totalPatronesp1) + parseFloat(de_totalPatronesp1)) * 100 / 130;
+    var totalTecnicasp1 = (parseFloat(im_tecnicasp1) + parseFloat(rm_tecnicasp1) + parseFloat(ml_tecnicasp1) + parseFloat(de_tecnicasp1)) *100 / 10;
+    var totalFlowp1 = (parseFloat(im_flowp1) + parseFloat(rm_flowp1) + parseFloat(ml_flowp1) + parseFloat(de_flowp1)) *100 /10;
+    var totalEscenap1 = (parseFloat(im_escenap1) + parseFloat(rm_escenap1) + parseFloat(ml_escenap1) + parseFloat(de_escenap1)) *100 /10;
+    //crear los % del player 2
+    var totalPatronesp2 = (parseFloat(im_totalPatronesp2) + parseFloat(rm_totalPatronesp2) + parseFloat(ml_totalPatronesp2) + parseFloat(de_totalPatronesp2)) * 100 / 130;
+    var totalTecnicasp2 = (parseFloat(im_tecnicasp2) + parseFloat(rm_tecnicasp2) + parseFloat(ml_tecnicasp2) + parseFloat(de_tecnicasp2)) *100 / 10;
+    var totalFlowp2 = (parseFloat(im_flowp2) + parseFloat(rm_flowp2) + parseFloat(ml_flowp2) + parseFloat(de_flowp2)) *100 /10;
+    var totalEscenap2 = (parseFloat(im_escenap2) + parseFloat(rm_escenap2) + parseFloat(ml_escenap2) + parseFloat(de_escenap2)) *100 /10;
+
+    
+    //chart barras
+    var chart1 = document.getElementById('chart1').getContext('2d');
+
+    var chart1_bar = new Chart(chart1,{
+        type:"bar",
+        data: {
+          labels:['Patrones', 'Técnicas', 'Flow', 'P. Escena'],
+          datasets: [
+            {
+            label: p1,
+            data: [totalPatronesp1.toFixed(2), totalTecnicasp1.toFixed(2), totalFlowp1.toFixed(2), totalEscenap1.toFixed(2)],
+            backgroundColor: 'rgb(220, 0, 0)',
+            borderColor: 'rgb(210, 0, 0)',
+            borderWidth: 1
+          },{
+            label: p2,
+            data: [totalPatronesp2.toFixed(2), totalTecnicasp2.toFixed(2), totalFlowp2.toFixed(2), totalEscenap2.toFixed(2) ],
+            backgroundColor: 'rgb(0, 0, 220)',
+            borderColor: 'rgb(0, 0, 210)',
+            borderWidth: 1
+          }
+        ]},
+        options: {
+          layout: {
+              padding: {
+                  left: 0,
+                  right: 10,
+                  top: 10,
+                  bottom: 10
+              }
+          },
+          legend:{
+            labels:{
+              fontColor: 'white',
+              fontFamily: 'Russo One',
+              display: false
+            }
+          },
+          scales: {
+            xAxes: [{
+
+              ticks: {
+                fontColor: 'white',
+                fontSize: 14,
+                fontFamily: 'Russo One',
+                beginAtZero: true,
+                min: 0,
+                max: 100
+              }
+            }],
+            yAxes: [{
+              display: false,
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                max: 100,
+                fontSize: 18
+              }
+            }]
+          }
+        }
+
+    }); //fin chart barras
+    
+    // chart LINE
+    var chart2 = document.getElementById('chart2').getContext('2d');
+    var chart2_line = new Chart(chart2,{
+        type:"line",
+        data: {
+          labels:['IM', 'RM', 'ML', 'DE'],
+          datasets: [
+            {
+            label: p1,
+            data: [(parseFloat(im_totalp1) * 100 / 30).toFixed(2), (parseFloat(rm_totalp1) * 100 /30).toFixed(2), (parseFloat(ml_totalp1) * 100 / 66).toFixed(2), (parseFloat(de_totalp1) * 100 / 34).toFixed(2)],
+            borderColor: 'rgb(0, 98, 255)',
+            borderWidth: 2
+          },{
+            label: p2,
+            data: [(parseFloat(im_totalp2) * 100 / 30).toFixed(2), (parseFloat(rm_totalp2) * 100 / 30).toFixed(2), (parseFloat(ml_totalp2) * 100 / 66).toFixed(2), (parseFloat(de_totalp2) * 100 / 34).toFixed(2)],
+            borderColor: 'rgb(210, 0, 0)',
+            borderWidth: 2
+          }
+        ]},
+        options: {
+          layout: {
+              padding: {
+                  left: 5,
+                  right: 5,
+                  top: 10,
+                  bottom: 10
+              }
+          },
+          legend:{
+            labels:{
+
+              fontColor: 'white',
+              fontFamily: 'Russo One',
+              display: false
+            }
+          },
+          scales: {
+            xAxes: [{
+              display: false,
+              ticks: {
+                fontColor: 'white',
+                fontSize: 14,
+                fontFamily: 'Russo One'
+              }
+            }],
+            yAxes: [{
+              display: false,
+              beginAtZero: true,
+              min: 0,
+              max: 100,
+              fontSize: 18
+            }]
+          }
+        }
+
+    });
+
+  });

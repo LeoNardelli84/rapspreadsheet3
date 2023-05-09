@@ -88,8 +88,26 @@ p{
 .resultados{
     display: flex;
     justify-content: space-between;
+    
 }
-
+.resultados h3{
+    color: white;
+    font-family: 'darkness';
+    font-size: 16px;
+    
+}
+.container-resultado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resultado{
+    color: white;
+    font-family: 'darkness';
+    text-shadow: 0px 0px 15px white;
+    margin-bottom: 0 !important;
+    margin-top: 15px;
+}
 /*Footer*/
 footer{
     animation-duration: 1s;
