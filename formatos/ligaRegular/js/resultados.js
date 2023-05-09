@@ -199,26 +199,14 @@ $(function(){
             }
           },
           scales: {
-            xAxes: [{
-
-              ticks: {
-                fontColor: 'white',
-                fontSize: 14,
-                fontFamily: 'Russo One',
-                beginAtZero: true,
-                min: 0,
-                max: 100
-              }
-            }],
-            yAxes: [{
+            x: {
+              beginAtZero: true
+             
+            },
+            y: {
               display: false,
-              ticks: {
-                beginAtZero: true,
-                min: 0,
-                max: 100,
-                fontSize: 18
-              }
-            }]
+              beginAtZero: true
+            }
           }
         }
 
@@ -234,12 +222,12 @@ $(function(){
             {
             label: p1,
             data: [(parseFloat(im_totalp1) * 100 / 30).toFixed(2), (parseFloat(rm_totalp1) * 100 /30).toFixed(2), (parseFloat(ml_totalp1) * 100 / 66).toFixed(2), (parseFloat(de_totalp1) * 100 / 34).toFixed(2)],
-            borderColor: 'rgb(0, 98, 255)',
+            borderColor: 'rgb(210, 0, 0)',
             borderWidth: 2
           },{
             label: p2,
             data: [(parseFloat(im_totalp2) * 100 / 30).toFixed(2), (parseFloat(rm_totalp2) * 100 / 30).toFixed(2), (parseFloat(ml_totalp2) * 100 / 66).toFixed(2), (parseFloat(de_totalp2) * 100 / 34).toFixed(2)],
-            borderColor: 'rgb(210, 0, 0)',
+            borderColor: 'rgb(0, 98, 255)',
             borderWidth: 2
           }
         ]},
@@ -252,30 +240,29 @@ $(function(){
                   bottom: 10
               }
           },
-          legend:{
-            labels:{
-
-              fontColor: 'white',
-              fontFamily: 'Russo One',
-              display: false
+          plugins: {
+            legend: {
+              labels: {
+                font: {
+                  color: 'white'
+                }
+              }
             }
           },
           scales: {
-            xAxes: [{
+            x: {
               display: false,
-              ticks: {
-                fontColor: 'white',
-                fontSize: 14,
-                fontFamily: 'Russo One'
-              }
-            }],
-            yAxes: [{
+              beginAtZero: true,
+              display: true,
+              
+            },
+            y: {
               display: false,
               beginAtZero: true,
               min: 0,
-              max: 100,
-              fontSize: 18
-            }]
+              max: 100
+               
+            }
           }
         }
 
