@@ -76,10 +76,12 @@ p{
 #nombre_finalp1{
     color: red;
     text-shadow: 0px 0px 4px black;
+    font-family: 'darkness';
 }
 #nombre_finalp2{
     color: blue;
     text-shadow: 0px 0px 4px black;
+    font-family: 'darkness';
 }
 .graficos-final{
     height: 100vh;
@@ -100,6 +102,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 #resultado{
     color: white;
@@ -108,6 +111,54 @@ p{
     margin-bottom: 0 !important;
     margin-top: 15px;
 }
+#difTotales{
+    color: white;
+}
+/*batallometro*/
+.batallometro{
+    margin-top: 30px;
+}
+.batallometro h2{
+    font-family: 'darkness';
+    color:white;
+    
+}
+.h6-batallometro{
+    color: white;
+    font-family: 'Helvetica';
+}
+.p-porcentaje{
+    font-family: 'darkness';
+    margin-bottom: 0% !important;
+    margin-top: 5px;
+    font-size: 12px;
+    color: black; 
+    font-weight: 800;
+    text-shadow: 0px 0px 10px white; 
+
+}
+.progressBar {
+    height: 35px;
+    border-radius: 1em;
+    margin:10px;
+    font-size: 16px;
+    font-family: 'Russo One', sans-serif;
+    padding-right: 20px;
+    padding-top: 5px;
+    max-width: 90vw;
+    background:
+      linear-gradient(-45deg,
+        rgba(255, 255, 255, 0.15) 25%,transparent 25%,
+        transparent 50%, rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,transparent 75%)
+      left/30px 30px repeat-x,
+      linear-gradient(to right, green 0%, yellow 50%, red 100%) left/var(--p,100%) fixed,
+      lightgray;
+  box-shadow:inset 0px -2px 5px rgba(0, 0, 0, 0.5);
+  animation: change 1s linear infinite;
+
+}
+
 /*Footer*/
 footer{
     animation-duration: 1s;

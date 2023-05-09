@@ -77,9 +77,22 @@ input{
 .skills{
     margin-top: 30px !important;
 }
-
+.publicidad{
+    height: 300px;
+    
+}
+.continuar{
+    display: flex;
+    justify-content: center;
+    
+}
 #btn-continuar{
-
+    background-color: bisque;
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: 'bombing'!important;
+    font-size: 30px !important;
 }
 /*Footer*/
 footer{

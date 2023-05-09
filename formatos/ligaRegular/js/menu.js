@@ -47,7 +47,7 @@ $(function(){
     switch (terminados) {
         case 0:      //ARRANCA EL MENU
           var options = {
-            strings: ["Bienvenido a rapspreadsheet", "FMS-Regenesis","","Nuevo formato FMS 2023", "3...2...1... TIEMPO!!", "" ],
+            strings: ["Bienvenid@ a rapspreadsheet", "FMS-Regenesis","","Nuevo formato FMS 2023", "3...2...1... TIEMPO!!", "" ],
             typeSpeed: 100,
             showCursor: false,
             smartBackspace: true

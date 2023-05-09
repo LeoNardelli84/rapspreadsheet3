@@ -135,16 +135,20 @@ $(function(){
     var difTotales = difTotales(resFinalp1, resFinalp2)
     if( difTotales <= 1.5){
         $("#resultado").html("replica")
+        $("#difTotales").html("(diferencia de " + difTotales + ")")
         $(".redes").css('background-color', 'rgb(57, 57, 57)')
         $(".graficos-final").css('background-color', 'rgb(57, 57, 57)')
+        
     } else if (resFinalp1 > resFinalp2) {
         $("#resultado").html("gano " + p1);
         $(".redes").css('background-color', 'red')
         $(".graficos-final").css('background-color', 'red')
+        $("#difTotales").html("(diferencia de " + difTotales + ")")
     } else{
         $("#resultado").html("gano " + p2)
         $(".redes").css('background-color', 'blue')
         $(".graficos-final").css('background-color', 'blue')
+        $("#difTotales").html("(diferencia de " + difTotales + ")")
     }
 
     //Chart.js
@@ -159,7 +163,17 @@ $(function(){
     var totalFlowp2 = (parseFloat(im_flowp2) + parseFloat(rm_flowp2) + parseFloat(ml_flowp2) + parseFloat(de_flowp2)) *100 /10;
     var totalEscenap2 = (parseFloat(im_escenap2) + parseFloat(rm_escenap2) + parseFloat(ml_escenap2) + parseFloat(de_escenap2)) *100 /10;
 
+    //batallometro
+    var batallometro = (parseFloat(resFinalp1) + parseFloat(resFinalp2)) * 100 / 320;
     
+    $(".progressBar").width(batallometro + "%");
+    $(".p-porcentaje").html(batallometro.toFixed(2) + "% ");
+    $(".h6-batallometro").html(parseFloat(resFinalp1) + parseFloat(resFinalp2) + " Puntos obtenidos")
+    
+
+
+
+
     //chart barras
     var chart1 = document.getElementById('chart1').getContext('2d');
 
@@ -183,6 +197,13 @@ $(function(){
           }
         ]},
         options: {
+          plugins:{
+            legend:{
+              labels: {
+                color: 'white'
+              }
+            }
+          },
           layout: {
               padding: {
                   left: 0,
@@ -191,15 +212,11 @@ $(function(){
                   bottom: 10
               }
           },
-          legend:{
-            labels:{
-              fontColor: 'white',
-              fontFamily: 'Russo One',
-              display: false
-            }
-          },
           scales: {
             x: {
+              ticks: {
+                color: 'white'
+              },
               beginAtZero: true
              
             },
@@ -212,19 +229,20 @@ $(function(){
 
     }); //fin chart barras
     
-    // chart LINE
+    // chart  2 LINE
     var chart2 = document.getElementById('chart2').getContext('2d');
     var chart2_line = new Chart(chart2,{
         type:"line",
         data: {
           labels:['IM', 'RM', 'ML', 'DE'],
-          datasets: [
-            {
+          datasets: [{
+            lineTension: 0.4,
             label: p1,
             data: [(parseFloat(im_totalp1) * 100 / 30).toFixed(2), (parseFloat(rm_totalp1) * 100 /30).toFixed(2), (parseFloat(ml_totalp1) * 100 / 66).toFixed(2), (parseFloat(de_totalp1) * 100 / 34).toFixed(2)],
             borderColor: 'rgb(210, 0, 0)',
             borderWidth: 2
           },{
+            lineTension: 0.4,
             label: p2,
             data: [(parseFloat(im_totalp2) * 100 / 30).toFixed(2), (parseFloat(rm_totalp2) * 100 / 30).toFixed(2), (parseFloat(ml_totalp2) * 100 / 66).toFixed(2), (parseFloat(de_totalp2) * 100 / 34).toFixed(2)],
             borderColor: 'rgb(0, 98, 255)',
@@ -232,6 +250,13 @@ $(function(){
           }
         ]},
         options: {
+          plugins:{
+            legend:{
+              labels: {
+                color: 'white'
+              }
+            }
+          },
           layout: {
               padding: {
                   left: 5,
@@ -240,20 +265,13 @@ $(function(){
                   bottom: 10
               }
           },
-          plugins: {
-            legend: {
-              labels: {
-                font: {
-                  color: 'white'
-                }
-              }
-            }
-          },
           scales: {
             x: {
-              display: false,
               beginAtZero: true,
               display: true,
+              ticks: {
+                color: 'white'
+              }
               
             },
             y: {
