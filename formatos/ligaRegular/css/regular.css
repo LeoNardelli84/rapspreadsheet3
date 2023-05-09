@@ -53,11 +53,22 @@ p, label{
 .form-group input{
     max-width: 80vw;
 }
+
+/*publicidad*/
+.publi_regular{
+    height: 300px;
+    display: flex;
+    justify-content: end;
+    background-image: url('../../../assets/img/publi_regular.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #btn-comenzar {
     background-color: bisque;
     border-radius: 40px;
     font-family: 'bombing';
-    margin-top: 350px;
     font-size: 40px;
     color: black;
     width: 150px;

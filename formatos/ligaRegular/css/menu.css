@@ -112,9 +112,14 @@ a{
 }
 
 /*publicidad menu*/
-.bg_publi{
+.publi_menu{
     width: 100%;
     height: 200px;
+    background-image: url('../../../assets/img/publi_menu.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 /*Footer*/
 footer{
