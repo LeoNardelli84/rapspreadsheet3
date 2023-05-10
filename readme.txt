@@ -1,15 +1,24 @@
-Hola! gracias por pasarte!! mi nombre es leonel, soy fan del rap, del hip hop, 
-y fan de la liga FMS. Se me ocurrio hacer esta web-app para votar las batallas de FMS
-aplicando todo lo que fui aprendiendo en diferentes cursos.
-La mayoria de cosas aprendi de forma autodidacta, por eso la desprolijidad de mi codigo...
-Espero les guste y puedan disfrutarla tanto como yo.
+Hola! me gustaria explicarte un poco en que consiste rapspreadsheet...
+basicamente es una planilla online para votar una competencia de freestyle (batalla de rap) que se llama Freestile master series (FMS). Es el mismo sistema que se utiliza en las batallas oficiales
+Es una competencia que se realiza en varios paises, incluidos argentina, españa, colombia entre otros.
+utilice varias librerias js para poder crear los graficos de la batalla.
+si vas a utilizarla en computadora, te recomiendo que para votar utilices TAB para cambiar de input. estan correctamente ordenados con tabindex="" a como se vota en la batalla, y las flechas arriba y abajo te suben los puntos en 0.5, hasta un maximo de 4.
+IMPORTANTE: los graficos estan preparados para recibir un maximo de 160 puntos por player, que es el maximo de puntos que uno puede sacar en una batalla, si al terminar la batalla se supera a ese numero (quizas porque en vez de votar un 4, puso 40) los graficos pueden no comportarse como deberian.
+Por el momento no se me ocurrio una solucion para esa validacion.
+Esta en proceso de produccion, asi que muchas de las cosas pueden ser modificadas parcial o totalmente en la version final.
+
+En el index quise dar el efecto de que la web se arma una vez que el usuario hace scroll.
+Los datos que voy obteniendo se van almacenando en el localStorage del navegador del lado del cliente. No se utilizan bases de datos.
+fue todo un desafio crear todas las variables, parsearlas, sumarlas, sacar porcentajes y demas cosas.
+
+
 
 lenguajes utilizados:
 html5
 css
 javascript
 
-librerias y frameworks
+librerias y frameworks:
 typed.js
 bootstrap
 jquery
