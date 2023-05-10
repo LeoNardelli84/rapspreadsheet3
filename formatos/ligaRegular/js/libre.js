@@ -7,6 +7,8 @@ function tomarDatos(){
     var p1_patron4 = parseFloat($("#patron4p1").val()) + parseFloat($("#vpatron4p1").val());
     var p1_patron5 = parseFloat($("#patron5p1").val()) + parseFloat($("#vpatron5p1").val());
     var p1_patron6 = parseFloat($("#patron6p1").val()) + parseFloat($("#vpatron6p1").val());
+    var checkTotal1 = 0;
+
     var p1_tecnica = parseFloat($("#tecnicasp1").val()) + parseFloat($("#vtecnicasp1").val());
     var p1_flow = parseFloat($("#flowp1").val()) + parseFloat($("#vflowp1").val());
     var p1_escena = parseFloat($("#escenap1").val()) + parseFloat($("#vescenap1").val());
@@ -20,13 +22,55 @@ function tomarDatos(){
     var p2_patron4 = parseFloat($("#patron4p2").val()) + parseFloat($("#vpatron4p2").val());
     var p2_patron5 = parseFloat($("#patron5p2").val()) + parseFloat($("#vpatron5p2").val());
     var p2_patron6 = parseFloat($("#patron6p2").val()) + parseFloat($("#vpatron6p2").val());
+    var checkTotal2 = 0;
+
     var p2_tecnica = parseFloat($("#tecnicasp2").val()) + parseFloat($("#vtecnicasp2").val());
     var p2_flow = parseFloat($("#flowp2").val()) + parseFloat($("#vflowp2").val());
     var p2_escena = parseFloat($("#escenap2").val()) + parseFloat($("#vescenap2").val());
     var p2_totalPatrones
     
-    p1_totalPatrones = p1_patron1 + p1_patron2 + p1_patron3 + p1_patron4 + p1_patron5 + p1_patron6;
-    p2_totalPatrones = p2_patron1 + p2_patron2 + p2_patron3 + p2_patron4 + p2_patron5 + p2_patron6; 
+
+    //variables checkbox p1
+    if ($("#checkPatron1p1").is(':checked')) {
+      checkTotal1 += 1;
+    }
+    if ($("#checkPatron2p1").is(':checked')) {
+      checkTotal1 += 1;
+    }
+    if ($("#checkPatron3p1").is(':checked')) {
+      checkTotal1 += 1;
+    }
+    if ($("#checkPatron4p1").is(':checked')) {
+      checkTotal1 += 1;
+    }
+    if ($("#checkPatron5p1").is(':checked')) {
+      checkTotal1 += 1;
+    }
+    if ($("#checkPatron6p1").is(':checked')) {
+      checkTotal1 += 1;
+    }
+    //variables checkbox p2
+    if ($("#checkPatron1p2").is(':checked')) {
+      checkTotal2 += 1;
+    }
+    if ($("#checkPatron2p2").is(':checked')) {
+      checkTotal2 += 1;
+    }
+    if ($("#checkPatron3p2").is(':checked')) {
+      checkTotal2 += 1;
+    }
+    if ($("#checkPatron4p2").is(':checked')) {
+      checkTotal2 += 1;
+    }
+    if ($("#checkPatron5p2").is(':checked')) {
+      checkTotal2 += 1;
+    }
+    if ($("#checkPatron6p2").is(':checked')) {
+      checkTotal2 += 1;
+    }
+
+    p1_totalPatrones = p1_patron1 + p1_patron2 + p1_patron3 + p1_patron4 + p1_patron5 + p1_patron6 + checkTotal1;
+    p2_totalPatrones = p2_patron1 + p2_patron2 + p2_patron3 + p2_patron4 + p2_patron5 + p2_patron6 + checkTotal2; 
     
     p1_totalMl = p1_totalPatrones + p1_tecnica + p1_flow + p1_escena;
     

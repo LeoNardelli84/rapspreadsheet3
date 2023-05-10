@@ -1,3 +1,22 @@
+Hola! gracias por pasarte!! mi nombre es leonel, soy fan del rap, del hip hop, 
+y fan de la liga FMS. Se me ocurrio hacer esta web-app para votar las batallas de FMS
+aplicando todo lo que fui aprendiendo en diferentes cursos.
+La mayoria de cosas aprendi de forma autodidacta, por eso la desprolijidad de mi codigo...
+Espero les guste y puedan disfrutarla tanto como yo.
+
+lenguajes utilizados:
+html5
+css
+javascript
+
+librerias y frameworks
+typed.js
+bootstrap
+jquery
+chart.js
+animate.css
+
+//INFO para el proyecto
 participantes de cada liga
 España: Sawi Elekipo y Mr. Ego
 Argentina: Dtoke, G Sony, CTZ, Replik, Cacha, Naista, Larrix, MP, Stuart, Klan, Dybbuk y Jaff
