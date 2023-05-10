@@ -84,7 +84,7 @@ p{
     font-family: 'darkness';
 }
 .graficos-final{
-    height: 100vh;
+    height: 100%;
     padding-top: 30px;
 }
 .resultados{
@@ -158,7 +158,18 @@ p{
   animation: change 1s linear infinite;
 
 }
-
+/*publicidad*/
+.publi_resultados{
+    height: 200px;
+    
+}
+.publi_res{
+    background-image: url("../../../assets/img/logo_2023.png");
+    height: 170px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 /*Footer*/
 footer{
     animation-duration: 1s;
@@ -173,5 +184,5 @@ footer{
 }
 .redes img{
     width: 50px;
-    
+    margin-top: 25px;
 }
