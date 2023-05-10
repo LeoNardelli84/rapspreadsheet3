@@ -101,7 +101,7 @@ $(function(){
             }
             var typed = new Typed("#subs", options);
             $(".deluxe>a").removeClass("disabled");
-            $(".deluxe>a").css('background-color', 'white')
+            $(".deluxe>a").css('background-color', 'white');
             $(".deluxe>a").focus();
     
             break;

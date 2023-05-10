@@ -76,9 +76,7 @@ main{
 }
 
 /*main - section - presentacion*/
-.presentacion{
-    margin-top: 50px;
-   }
+
 .img-presentacion{
     background-image: url('../assets/img/logo_2023.png');
     width: 300;
